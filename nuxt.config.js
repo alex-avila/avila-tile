@@ -12,7 +12,7 @@ const routerBase =
 module.exports = {
   mode: 'universal',
 
-  ...routerBase,
+  // ...routerBase,
 
   /*
   ** Headers of the page
