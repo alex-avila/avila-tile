@@ -4,7 +4,7 @@ const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
         router: {
-          base: '/alex-avila/'
+          base: '/avila-tile/'
         }
       }
     : {}
@@ -12,7 +12,7 @@ const routerBase =
 module.exports = {
   mode: 'universal',
 
-  // ...routerBase,
+  ...routerBase,
 
   /*
   ** Headers of the page
