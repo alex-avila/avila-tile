@@ -2,10 +2,6 @@
   <section class="container">
     <div class="hero">
       <div class="hero__overlay" />
-      <img
-        src="@/assets/background-large.jpg"
-        alt=""
-      >
     </div>
     <div>
       <h1 class="title">Avila Tile</h1>
@@ -15,7 +11,7 @@
 
 <style>
 .container {
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 82px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,16 +21,13 @@
 
 .hero {
   position: absolute;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  background: url('../assets/background-large.jpg');
+  background-position: center;
+  background-size: cover;
   top: 0;
   overflow: hidden;
-  z-index: -1;
-}
-
-.hero img {
-  max-width: none;
-  height: 100%;
-  position: relative;
   z-index: -1;
 }
 
@@ -46,8 +39,9 @@
 }
 
 .title {
-  font-family: 'Futura', 'Avenir', 'Source Sans Pro', -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Staatliches', 'Futura', 'Avenir', 'Source Sans Pro',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
