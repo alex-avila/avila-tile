@@ -83,21 +83,25 @@ export default {
   bottom: 0
   height: 100%
   width: 100%
-  background-color: black
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)
+  background-blend-mode: multiply;
   color: white
   flex-direction: column
   align-items: center
   justify-content: center
   transform: translateY(-100%)
-  transition: all 0.33s
+  opacity: 0;
+  transition: all 0.33s ease-in-out
 
   &.is-visible
+    opacity: 1;
     transform: translateY(0)
 
   @media (min-width: 560px)
     transition: none
     transform: translateY(0)
     display: block
+    opacity: 1
     position: relative
     background: transparent
     height: auto
