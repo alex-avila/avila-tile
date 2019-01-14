@@ -66,7 +66,7 @@ export default {
 .nav__logo
   letter-spacing: 3px
   text-transform: uppercase
-  font-weight: 600
+  font-weight: 700
 
 .menu-icon
   cursor: pointer
@@ -117,6 +117,7 @@ export default {
   text-decoration: none
   color: white
   padding: 1em
+  font-weight: 600
 
   @media (min-width: 560px)
     padding: 0
