@@ -1,7 +1,9 @@
 @import './variables.sass'
+@import './featured-works.sass'
 
 .container
   min-height: calc(100vh - 82px)
+  height: 90vh
   display: flex
   justify-content: center
   align-items: center
@@ -14,6 +16,8 @@
   width: 100%
   background: url('../assets/background-large.jpg')
   background-position: center
+  background-attachment: fixed
+  background-repeat: no-repeat
   background-size: cover
   top: 0
   overflow: hidden
@@ -22,7 +26,7 @@
 .hero__overlay
   height: 100%
   width: 100%
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) -10%, rgba(0, 0, 0, 0.5))
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.33) -10%, rgba(0, 0, 0, 0.66))
   position: absolute
 
 .callToAction__wrapper

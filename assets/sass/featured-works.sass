@@ -1,0 +1,29 @@
+.featured-works
+  max-width: 1200px
+  margin: auto
+  padding: 1em 0
+
+.title__wrapper
+  display: inline-flex
+
+.title
+  padding: 0 1em 2em
+
+.title__underline
+  display: block
+  height: 3px
+  width: 100%
+  background: black
+
+.works
+  @media (min-width: 560px)
+    padding: 0 1em 1em
+    display: grid
+    gap: 2em
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+
+.work__info
+  padding: 1em 1em 1.618em
+
+  @media (min-width: 560px)
+    padding: 1em 0 0

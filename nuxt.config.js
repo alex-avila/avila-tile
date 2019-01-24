@@ -29,7 +29,7 @@ module.exports = {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat|Staatliches'
+        href: 'https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans'
       }
     ]
   },
