@@ -1,5 +1,11 @@
 <template>
   <div>
+    <transition name="fade">
+      <div
+        v-if="!finishedSetUp"
+        class="loading-overlay"
+      />
+    </transition>
     <section class="container">
       <div class="hero">
         <div
@@ -33,13 +39,18 @@ export default {
   },
 
   data: () => ({
-    parallaxSlowDown: 0.25
+    parallaxSlowDown: 0.25,
+    finishedSetUp: false
   }),
 
   mounted() {
     this.callToActionOffset = this.getYOffset(this.$refs.callToAction)
 
+    this.parallaxThings()
+
     window.addEventListener('scroll', this.throttle(this.parallaxThings, 5))
+
+    this.finishedSetUp = true
   },
 
   destroyed() {
