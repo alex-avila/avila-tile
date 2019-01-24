@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="header">
     <nav class="nav">
       <div class="nav__wrapper">
         <div class="nav__logo">Avila Tile</div>
@@ -52,6 +52,9 @@ export default {
 
 
 <style lang="sass" scoped>
+.header
+  margin: 0 0 -82px
+
 .nav
   padding: 1em
   color: white

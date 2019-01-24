@@ -33,7 +33,7 @@ export default {
   },
 
   data: () => ({
-    parallaxSlowDown: 1.33
+    parallaxSlowDown: 0.25
   }),
 
   mounted() {
@@ -69,6 +69,7 @@ export default {
 
       const opacity = (callToActionOffset - pageYOffset) / callToActionOffset
 
+      console.log(callToAction)
       callToAction.style.opacity = opacity < 0 ? 0 : opacity > 0.9 ? 1 : opacity
     },
 
@@ -77,9 +78,9 @@ export default {
         { height } = window.getComputedStyle(hero, '::after'),
         { pageYOffset } = window
 
-      const verticalPosition = pageYOffset / this.parallaxSlowDown
+      const verticalPosition = pageYOffset / (1 / this.parallaxSlowDown)
 
-      hero.style.top = `-${verticalPosition}px`
+      hero.style.backgroundPosition = `center ${verticalPosition}px`
     },
 
     parallaxThings() {

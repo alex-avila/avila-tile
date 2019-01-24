@@ -2,13 +2,13 @@
 @import './featured-works.sass'
 
 .container
-  min-height: calc(100vh - 82px)
-  height: 90vh
+  min-height: 600px
   display: flex
   justify-content: center
   align-items: center
   text-align: center
   color: white
+  position: relative
 
 .hero
   position: absolute
@@ -19,7 +19,7 @@
   z-index: -1
 
 .hero__img
-  position: fixed
+  position: absolute
   height: 100%
   width: 100%
   background: url('../assets/background-large.jpg')
@@ -35,8 +35,8 @@
 
 .callToAction__wrapper
   max-width: 800px
-  padding: 1em
-  margin: 0 auto 5em
+  padding: 141px 1em 100px
+  margin: auto 
 
 .callToAction__text
   font-family: $heading-font
