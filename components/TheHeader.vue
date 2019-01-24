@@ -1,5 +1,10 @@
 <template>
-  <header class="header">
+  <header
+    :class="[
+      'header',
+      {'is-static': isStatic}
+    ]"
+  >
     <nav class="nav">
       <div class="nav__wrapper">
         <div class="nav__logo">Avila Tile</div>
@@ -12,7 +17,7 @@
         <div :class="['nav__links', {'is-visible': isMenuShown}]">
           <span
             class="nav__close"
-            @click="toggleMenu(false)"
+            @click="toggleMenu(false, 250)"
           >Close</span>
           <nuxt-link
             class="nav__link"
@@ -39,12 +44,18 @@
 <script>
 export default {
   data: () => ({
-    isMenuShown: false
+    isMenuShown: false,
+    isStatic: false
   }),
 
   methods: {
-    toggleMenu(isShown) {
+    toggleMenu(isShown, isStaticTimeout) {
       this.isMenuShown = isShown
+
+      // This is to wait for the transition of the menu hiding
+      setTimeout(() => {
+        this.isStatic = isShown
+      }, isStaticTimeout)
     }
   }
 }
@@ -54,6 +65,11 @@ export default {
 <style lang="sass" scoped>
 .header
   margin: 0 0 -82px
+  position: relative
+  z-index: 10
+
+  &.is-static
+    position: static
 
 .nav
   padding: 1em
@@ -98,6 +114,10 @@ export default {
   transition: all 0.33s ease-in-out
 
   &.is-visible
+
+    .header
+      position: static
+
     opacity: 1;
     transform: translateY(0)
 
