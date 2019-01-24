@@ -1,10 +1,11 @@
 <template>
   <div>
     <section class="container">
-      <div
-        ref="hero"
-        class="hero"
-      >
+      <div class="hero">
+        <div
+          ref="hero"
+          class="hero__img"
+        />
         <div class="hero__overlay" />
       </div>
       <div
@@ -73,12 +74,12 @@ export default {
 
     parallaxBackground() {
       const { hero } = this.$refs,
-        { height } = window.getComputedStyle(hero),
+        { height } = window.getComputedStyle(hero, '::after'),
         { pageYOffset } = window
 
       const verticalPosition = pageYOffset / this.parallaxSlowDown
 
-      hero.style.backgroundPosition = `center -${verticalPosition}px`
+      hero.style.top = `-${verticalPosition}px`
     },
 
     parallaxThings() {
