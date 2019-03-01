@@ -80,7 +80,6 @@ export default {
 
       const opacity = (callToActionOffset - pageYOffset) / callToActionOffset
 
-      console.log(callToAction)
       callToAction.style.opacity = opacity < 0 ? 0 : opacity > 0.9 ? 1 : opacity
     },
 
