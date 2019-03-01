@@ -29,7 +29,7 @@ module.exports = {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans'
+        href: 'https://fonts.googleapis.com/css?family=B612|B612+Mono'
       }
     ]
   },

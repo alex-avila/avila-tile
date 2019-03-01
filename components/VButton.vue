@@ -8,5 +8,5 @@
 </template>
 
 <style lang="sass" scoped>
-@import '../assets/sass/buttons.sass'
+@import '../assets/styles/components/buttons'
 </style>

@@ -112,5 +112,5 @@ export default {
 </script>
 
 <style lang="sass">
-@import '../assets/sass/landing'
+@import '../assets/styles/pages/landing'
 </style>

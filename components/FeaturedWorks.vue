@@ -14,7 +14,7 @@
           class="work"
         >
           <img
-            src="@/assets/tile-sample.jpg"
+            src="@/assets/images/tile-sample.jpg"
             alt="Kitchen backsplash"
           >
           <div class="work__info">
