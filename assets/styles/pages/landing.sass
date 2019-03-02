@@ -49,17 +49,19 @@
   position: absolute
 
 .callToAction__wrapper
-  max-width: 800px
+  max-width: 1000px
   padding: 141px 1em 100px
   margin: auto 
 
 .callToAction__text
   font-family: $heading-font
   display: block
-  font-weight: 300
-  font-size: 2em
+  font-weight: 500
+  font-size: 1.618em
   letter-spacing: 1px
-  text-transform: uppercase
+
+  @media (min-width: 560px)
+    padding: 1em 0
 
 .callToAction__btn
   margin-top: 1em

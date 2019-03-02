@@ -19,7 +19,7 @@
         class="callToAction__wrapper"
       >
         <h1 class="callToAction__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Delivering our best work to your business or residential improvement.
         </h1>
         <v-button class="callToAction__btn">Contact Us</v-button>
       </div>
