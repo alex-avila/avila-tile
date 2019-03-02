@@ -12,7 +12,7 @@
           class="nav__logo"
           to="/"
         >
-          Avila Tile
+          Avila Tiling
         </nuxt-link>
         <menu-icon
           class="icon menu-icon"
