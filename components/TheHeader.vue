@@ -14,19 +14,15 @@
         >
           Avila Tile
         </nuxt-link>
-        <div
-          class="menu-icon"
-          @click="toggleMenu(true)"
-        >
-          MENU
-        </div>
+        <menu-icon
+          class="icon menu-icon"
+          @click.native="toggleMenu(true)"
+        />
         <div :class="['nav__links', {'is-visible': isMenuShown}]">
-          <span
-            class="nav__close"
-            @click="toggleMenu(false, 250)"
-          >
-            Close
-          </span>
+          <close-icon
+            class="icon nav__close"
+            @click.native="toggleMenu(false, 250)"
+          />
           <nuxt-link
             class="nav__link"
             to="/"
@@ -69,7 +65,15 @@
 </template>
 
 <script>
+import MenuIcon from '@/assets/icons/MenuIcon.vue'
+import CloseIcon from '@/assets/icons/CloseIcon.vue'
+
 export default {
+  components: {
+    MenuIcon,
+    CloseIcon
+  },
+
   data: () => ({
     isMenuShown: false,
     isStatic: false

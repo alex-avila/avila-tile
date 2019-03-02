@@ -5,6 +5,9 @@ a
     text-decoration: none
     color: initial
 
+.icon
+  height: 16px
+
 .header
   position: relative
   z-index: 10
@@ -15,9 +18,11 @@ a
 .is-landing-page
   margin: 0 0 -96px
 
-  .nav__logo,
-  .menu-icon
+  .nav__logo
     color: white
+  
+  .menu-icon
+    stroke: white
 
   .nav__wrapper
     height: 50px
@@ -39,7 +44,7 @@ a
   font-weight: 700
 
 .menu-icon
-  color: black
+  stroke: black
   font-weight: 600
   cursor: pointer
 
@@ -84,6 +89,7 @@ a
     width: auto
 
 .nav__close
+  stroke: white
   position: absolute
   top: 1em
   right: 1em
