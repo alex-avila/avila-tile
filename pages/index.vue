@@ -48,16 +48,13 @@ export default {
 
     this.parallaxThings()
 
-    window.addEventListener('scroll', this.throttle(this.parallaxThings, 5))
+    window.addEventListener('scroll', this.throttleParallax)
 
     this.finishedSetUp = true
   },
 
   destroyed() {
-    document.removeEventListener(
-      'scroll',
-      this.throttle(this.parallaxThings, 5)
-    )
+    window.removeEventListener('scroll', this.throttleParallax)
   },
 
   methods: {
@@ -106,6 +103,10 @@ export default {
           time = Date.now()
         }
       }
+    },
+
+    throttleParallax() {
+      this.throttle(this.parallaxThings, 5)
     }
   }
 }
