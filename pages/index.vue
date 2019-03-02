@@ -24,18 +24,18 @@
         <v-button class="callToAction__btn">Contact Us</v-button>
       </div>
     </section>
-    <featured-works />
+    <featured-work />
   </div>
 </template>
 
 <script>
 import VButton from '@/components/VButton.vue'
-import FeaturedWorks from '@/components/FeaturedWorks.vue'
+import FeaturedWork from '@/components/FeaturedWork.vue'
 
 export default {
   components: {
     VButton,
-    FeaturedWorks
+    FeaturedWork
   },
 
   data: () => ({

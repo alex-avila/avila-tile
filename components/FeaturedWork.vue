@@ -1,9 +1,9 @@
 <template>
-  <div class="featured-works__wrapper">
-    <div class="featured-works">
+  <div class="featured-work__wrapper">
+    <div class="featured-work">
       <div class="title__wrapper">
         <div class="title">
-          <h2 class="title__title">Featured Works</h2>
+          <h2 class="title__title">Featured Work</h2>
           <span class="title__underline" />
         </div>
       </div>
@@ -14,6 +14,7 @@
           class="work"
         >
           <img
+            class="work__image"
             src="@/assets/images/tile-sample.jpg"
             alt="Kitchen backsplash"
           >
@@ -23,6 +24,18 @@
           </div>
         </div>
       </div>
+      <div class="see-more__wrapper">
+        <nuxt-link
+          to=""
+          class="see-more"
+        >
+          Gallery >>
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
+
+<style lang="sass" scoped>
+@import '../assets/styles/components/featured-work.sass'
+</style>
