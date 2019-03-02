@@ -40,31 +40,28 @@ export default {
 
   data: () => ({
     parallaxSlowDown: 0.25,
-    finishedSetUp: false
+    finishedSetUp: false,
+    throttleWait: 8,
+    throttleTime: Date.now()
   }),
 
   mounted() {
     this.callToActionOffset = this.getYOffset(this.$refs.callToAction)
-
     this.parallaxThings()
-
-    window.addEventListener('scroll', this.throttleParallax)
-
+    document.addEventListener('scroll', this.throttledParallax)
     this.finishedSetUp = true
   },
 
   destroyed() {
-    window.removeEventListener('scroll', this.throttleParallax)
+    document.removeEventListener('scroll', this.throttledParallax)
   },
 
   methods: {
     getYOffset(elem) {
-      const toNum = px => Number(px.split('px')[0])
+      const toNum = px => Number(px.split('px')[0]),
+        { offsetHeight } = elem,
+        { height, paddingTop, paddingBottom } = window.getComputedStyle(elem)
 
-      const { offsetHeight } = elem
-      const { height, paddingTop, paddingBottom } = window.getComputedStyle(
-        elem
-      )
       return (
         offsetHeight + toNum(height) + toNum(paddingTop) + toNum(paddingBottom)
       )
@@ -73,9 +70,8 @@ export default {
     fadeCallToAction() {
       const { callToAction } = this.$refs,
         { callToActionOffset } = this,
-        { pageYOffset } = window
-
-      const opacity = (callToActionOffset - pageYOffset) / callToActionOffset
+        { pageYOffset } = window,
+        opacity = (callToActionOffset - pageYOffset) / callToActionOffset
 
       callToAction.style.opacity = opacity < 0 ? 0 : opacity > 0.9 ? 1 : opacity
     },
@@ -83,9 +79,8 @@ export default {
     parallaxBackground() {
       const { hero } = this.$refs,
         { height } = window.getComputedStyle(hero, '::after'),
-        { pageYOffset } = window
-
-      const verticalPosition = pageYOffset / (1 / this.parallaxSlowDown)
+        { pageYOffset } = window,
+        verticalPosition = pageYOffset / (1 / this.parallaxSlowDown)
 
       hero.style.backgroundPosition = `center ${verticalPosition}px`
     },
@@ -95,18 +90,11 @@ export default {
       this.parallaxBackground()
     },
 
-    throttle(fn, wait) {
-      var time = Date.now()
-      return function() {
-        if (time + wait - Date.now() < 0) {
-          window.requestAnimationFrame(fn)
-          time = Date.now()
-        }
+    throttledParallax() {
+      if (this.throttleTime + this.throttleWait - Date.now() < 0) {
+        window.requestAnimationFrame(this.parallaxThings)
+        this.throttleTime = Date.now()
       }
-    },
-
-    throttleParallax() {
-      this.throttle(this.parallaxThings, 5)
     }
   }
 }
