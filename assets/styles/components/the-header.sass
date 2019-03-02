@@ -14,11 +14,9 @@ a
   position: relative
   z-index: 10
 
-  &.is-static
-    position: static
-
 .is-landing-page
-  margin: 0 0 -96px
+  position: absolute
+  width: 100%
 
   .nav__logo
     color: white
@@ -27,7 +25,6 @@ a
     stroke: white
 
   .nav__wrapper
-    height: 50px
     padding-top: 0
     padding-bottom: 0
 
@@ -67,21 +64,19 @@ a
   height: 100%
   width: 100%
   background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)
-  background-blend-mode: multiply;
+  background-blend-mode: multiply
   flex-direction: column
   align-items: center
   justify-content: center
   transform: translateY(-100%)
-  opacity: 0;
   transition: all 0.33s ease-in-out
+  position: fixed
+  height: 100%
+  width: 100%
 
   &.is-visible
-
-    .header
-      position: static
-
-    opacity: 1;
     transform: translateY(0)
+    z-index: 3
 
   @media (min-width: 560px)
     transition: none
@@ -96,7 +91,7 @@ a
 .nav__close
   stroke: white
   position: absolute
-  top: 1em
+  top: 1.618em
   right: 1em
   cursor: pointer
 

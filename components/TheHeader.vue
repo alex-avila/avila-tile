@@ -2,7 +2,6 @@
   <header
     :class="[
       'header',
-      {'is-static': isStatic},
       {'is-landing-page': $route.path === '/'}
     ]"
   >
@@ -18,7 +17,13 @@
           class="icon menu-icon"
           @click.native="toggleMenu(true)"
         />
-        <div :class="['nav__links', {'is-visible': isMenuShown}]">
+        <div
+          :class="[
+            'nav__links',
+            {'is-visible': isMenuShown},
+            {'is-mobile-menu-open': isMobileMenuOpen}
+          ]"
+        >
           <close-icon
             class="icon nav__close"
             @click.native="toggleMenu(false, 250)"
@@ -76,17 +81,17 @@ export default {
 
   data: () => ({
     isMenuShown: false,
-    isStatic: false
+    isMobileMenuOpen: false
   }),
 
   methods: {
-    toggleMenu(isShown, isStaticTimeout) {
+    toggleMenu(isShown, timeout) {
       this.isMenuShown = isShown
 
       // This is to wait for the transition of the menu hiding
       setTimeout(() => {
-        this.isStatic = isShown
-      }, isStaticTimeout)
+        this.isMobileMenuOpen = isShown
+      }, timeout)
     },
 
     closeMenu() {
