@@ -7,7 +7,7 @@
     ]"
   >
     <nav class="nav">
-      <div class="nav__wrapper">
+      <div class="nav__wrapper default-wrapper">
         <nuxt-link
           class="nav__logo"
           to="/"
@@ -24,7 +24,7 @@
             @click.native="toggleMenu(false, 250)"
           />
           <nuxt-link
-            class="nav__link"
+            class="nav__link nav__link--home"
             to="/"
             @click.native="closeMenu"
           >

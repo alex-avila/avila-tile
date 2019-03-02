@@ -1,3 +1,5 @@
+@import '../basics/helper-classes'
+
 a
   color: initial
   text-decoration: none
@@ -26,11 +28,14 @@ a
 
   .nav__wrapper
     height: 50px
-    padding: 0
+    padding-top: 0
+    padding-bottom: 0
+
+  .nav__link
+    color: white
 
 .nav
-  padding: 1.4em 1em
-  color: white
+  padding: 1.4em 0
 
 .nav__wrapper
   max-width: 1000px
@@ -101,9 +106,7 @@ a
 .nav__link
   display: inline
   text-decoration: none
-  color: white
   padding: 1em
-  font-weight: 600
 
   @media (min-width: 560px)
     padding: 0
@@ -111,9 +114,10 @@ a
   &:not(:last-child)
     @media (min-width: 560px)
       margin-right: 1em
-  
-  &:visited
-    color: white
 
   &:hover
-    border-bottom: none;
+    border-bottom: none
+
+.nav__link--home
+  @media (min-width: 560px)
+    display: none
