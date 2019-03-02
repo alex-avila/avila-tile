@@ -18,23 +18,33 @@
           <span
             class="nav__close"
             @click="toggleMenu(false, 250)"
-          >Close</span>
+          >
+            Close
+          </span>
+          <nuxt-link
+            class="nav__link"
+            to="/about"
+          >
+            About
+          </nuxt-link>
           <nuxt-link
             class="nav__link"
             to="/"
-          >About</nuxt-link>
+          >
+            Portfolio
+          </nuxt-link>
           <nuxt-link
             class="nav__link"
             to="/"
-          >Portfolio</nuxt-link>
+          >
+            Blog
+          </nuxt-link>
           <nuxt-link
             class="nav__link"
             to="/"
-          >Blog</nuxt-link>
-          <nuxt-link
-            class="nav__link"
-            to="/"
-          >Contact</nuxt-link>
+          >
+            Contact
+          </nuxt-link>
         </div>
       </div>
     </nav>
