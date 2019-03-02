@@ -25,16 +25,28 @@
         </div>
       </div>
       <div class="see-more__wrapper">
-        <nuxt-link
+        <v-button
           to=""
           class="see-more"
+          ghost
         >
-          Gallery >>
-        </nuxt-link>
+          Gallery ➡️
+        </v-button>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import VButton from './VButton.vue'
+
+export default {
+  components: {
+    VButton
+  }
+}
+</script>
+
 
 <style lang="sass" scoped>
 @import '../assets/styles/components/featured-work.sass'
