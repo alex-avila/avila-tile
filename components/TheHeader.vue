@@ -2,12 +2,18 @@
   <header
     :class="[
       'header',
-      {'is-static': isStatic}
+      {'is-static': isStatic},
+      {'is-landing-page': $route.path === '/'}
     ]"
   >
     <nav class="nav">
       <div class="nav__wrapper">
-        <div class="nav__logo">Avila Tile</div>
+        <nuxt-link
+          class="nav__logo"
+          to="/"
+        >
+          Avila Tile
+        </nuxt-link>
         <div
           class="menu-icon"
           @click="toggleMenu(true)"
@@ -23,25 +29,36 @@
           </span>
           <nuxt-link
             class="nav__link"
+            to="/"
+            @click.native="closeMenu"
+          >
+            Home
+          </nuxt-link>
+          <nuxt-link
+            class="nav__link"
             to="/about"
+            @click.native="closeMenu"
           >
             About
           </nuxt-link>
           <nuxt-link
             class="nav__link"
             to="/"
+            @click.native="closeMenu"
           >
             Portfolio
           </nuxt-link>
           <nuxt-link
             class="nav__link"
             to="/"
+            @click.native="closeMenu"
           >
             Blog
           </nuxt-link>
           <nuxt-link
             class="nav__link"
             to="/"
+            @click.native="closeMenu"
           >
             Contact
           </nuxt-link>
@@ -66,6 +83,10 @@ export default {
       setTimeout(() => {
         this.isStatic = isShown
       }, isStaticTimeout)
+    },
+
+    closeMenu() {
+      this.toggleMenu(false, 250)
     }
   }
 }
