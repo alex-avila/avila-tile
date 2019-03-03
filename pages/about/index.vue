@@ -1,6 +1,8 @@
 <template>
   <article class="about">
-    <main-heading>About</main-heading>
+    <main-heading>
+      Delivering our best work to your business or residential improvement.
+    </main-heading>
     <div class="default-wrapper">
       <p class="paragraph">
         Established in 2012, Avila Tiling prides ourselves in delivering our best work to
