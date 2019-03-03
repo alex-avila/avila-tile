@@ -9,7 +9,7 @@
         <h1 class="callToAction__text">
           Avila Tiling makes sure every detail is perfect.
         </h1>
-        <v-button class="callToAction__btn">☎️ Contact Us</v-button>
+        <v-button class="callToAction__btn">Contact Us</v-button>
       </div>
     </section>
     <featured-work />
