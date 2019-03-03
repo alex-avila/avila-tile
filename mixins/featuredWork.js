@@ -25,12 +25,6 @@ export default {
     }
   },
 
-  computed: {
-    hasMoreImages() {
-      return this.featuredWork.length > this.shownImagesNum
-    }
-  },
-
   methods: {
     getFeaturedImage(image) {
       return require(`@/assets/images/featured-work/${image}.jpg`)

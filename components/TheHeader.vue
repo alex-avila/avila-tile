@@ -44,6 +44,13 @@
           </nuxt-link>
           <nuxt-link
             class="nav__link"
+            to="/gallery"
+            @click.native="closeMenu"
+          >
+            Gallery
+          </nuxt-link>
+          <nuxt-link
+            class="nav__link"
             to="/"
             @click.native="closeMenu"
           >

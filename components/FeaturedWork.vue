@@ -24,16 +24,13 @@
           </div> -->
         </div>
       </div>
-      <div
-        v-if="hasMoreImages"
-        class="see-more__wrapper"
-      >
+      <div class="see-more__wrapper">
         <v-button
-          to=""
+          to="/gallery"
           class="see-more"
           ghost
         >
-          Load more
+          See more at the gallery 📷
         </v-button>
       </div>
     </div>
