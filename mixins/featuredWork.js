@@ -14,9 +14,9 @@ export default {
         {
           src: this.getFeaturedImage('white-backsplash')
         },
-        // {
-        //   src: this.getFeaturedImage('white-tile')
-        // },
+        {
+          src: this.getFeaturedImage('blue-bathroom')
+        },
         {
           src: this.getFeaturedImage('wood-tile')
         }
