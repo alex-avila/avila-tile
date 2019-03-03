@@ -20,7 +20,14 @@ export default {
         {
           src: this.getFeaturedImage('wood-tile')
         }
-      ]
+      ],
+      shownImagesNum: 6
+    }
+  },
+
+  computed: {
+    hasMoreImages() {
+      return this.featuredWork.length > this.shownImagesNum
     }
   },
 
