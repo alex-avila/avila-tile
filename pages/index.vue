@@ -7,7 +7,7 @@
       </div>
       <div class="callToAction__wrapper">
         <h1 class="callToAction__text">
-          Delivering our best work to your business or residential improvement.
+          Avila Tiling makes sure every detail is perfect.
         </h1>
         <v-button class="callToAction__btn">☎️ Contact Us</v-button>
       </div>
