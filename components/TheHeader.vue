@@ -47,20 +47,6 @@
             to="/"
             @click.native="closeMenu"
           >
-            Portfolio
-          </nuxt-link>
-          <nuxt-link
-            class="nav__link"
-            to="/"
-            @click.native="closeMenu"
-          >
-            Blog
-          </nuxt-link>
-          <nuxt-link
-            class="nav__link"
-            to="/"
-            @click.native="closeMenu"
-          >
             Contact
           </nuxt-link>
         </div>
