@@ -9,19 +9,20 @@
       </div>
       <div class="works">
         <div
-          v-for="work in [1, 2, 3]"
-          :key="work"
+          v-for="{ src } in featuredWork"
+          :key="src"
           class="work"
+          @click="openModal"
         >
           <img
+            :src="src"
             class="work__image"
-            src="@/assets/images/tile-sample.jpg"
             alt="Kitchen backsplash"
           >
-          <div class="work__info">
+          <!-- <div class="work__info">
             <h3 class="work__title">Kitchen backsplash</h3>
             <p class="work__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="see-more__wrapper">
@@ -38,12 +39,15 @@
 </template>
 
 <script>
+import featuredWork from '@/mixins/featuredWork'
 import VButton from './VButton.vue'
 
 export default {
   components: {
     VButton
-  }
+  },
+
+  mixins: [featuredWork]
 }
 </script>
 
