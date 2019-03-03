@@ -12,7 +12,6 @@
           v-for="{ src } in featuredWork"
           :key="src"
           class="work"
-          @click="openModal"
         >
           <img
             :src="src"
