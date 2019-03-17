@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="icon"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 23.82 14"
   >
@@ -35,6 +36,7 @@
 </template>
 
 <style lang="sass" scoped>
+@import '../styles/components/icons'
 .cls-1
   fill: none
   stroke-width: 2px
