@@ -42,19 +42,18 @@ export default {
       galleryImages: [
         { src: this.getImage('70s') },
         { src: this.getImage('blue-bathroom') },
+        { src: this.getImage('blur-on-blue-tiles') },
+        { src: this.getImage('bnw-pattern-floor') },
+        { src: this.getImage('bnw-pattern') },
         { src: this.getImage('checkers') },
         { src: this.getImage('checkers2') },
+        { src: this.getImage('diagonal') },
+        { src: this.getImage('toilette') },
         { src: this.getImage('white-backsplash') },
         { src: this.getImage('white-tile') },
         { src: this.getImage('wood-tile') },
-        { src: this.getImage('70s') },
-        { src: this.getImage('blue-bathroom') },
-        { src: this.getImage('checkers') },
-        { src: this.getImage('checkers2') },
-        { src: this.getImage('white-backsplash') },
-        { src: this.getImage('white-tile') },
-        { src: this.getImage('wood-tile') },
-        { src: this.getImage('70s') }
+        { src: this.getImage('work-in-progress') },
+        { src: this.getImage('working') }
       ],
 
       showModal: false,
