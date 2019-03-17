@@ -25,13 +25,14 @@
         </div>
       </div>
       <div class="see-more__wrapper">
-        <v-button
-          to="/gallery"
-          class="see-more"
-          ghost
-        >
-          See more at the gallery 📷
-        </v-button>
+        <nuxt-link to="/gallery">
+          <v-button
+            class="see-more"
+            ghost
+          >
+            More Images 📷
+          </v-button>
+        </nuxt-link>
       </div>
     </div>
   </div>
